@@ -1,10 +1,11 @@
 {
   "name": "12-08-21",
   "version": "1.0.0",
-  "description": "- Intro to Testing\r - Intro to Express",
-  "main": "app.js",
+  "description": "forEveryClass",
+  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
     "url": "https://github.com/QFults/12-08-21/issues"
   },
   "homepage": "https://github.com/QFults/12-08-21#readme",
-  "devDependencies": {
-    "jest": "^27.4.3"
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
