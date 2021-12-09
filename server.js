@@ -44,15 +44,15 @@ app.get('/foods', (req, res) => {
 //   res.json(games);
 // })
 
-// const dog = {
-//   name: 'Beef',
-//   age: 2,
-//   breed: 'Chihuahua'
-// }
+const dog = {
+  name: 'Beef',
+  age: 2,
+  breed: 'Chihuahua'
+}
 
-// app.get('/dog', (req, res) => {
-//   res.json(dog)
-// })
+app.get('/', (req, res) => {
+  res.json(dog)
+})
 
 // app.get('/', (req, res) => {
 //   res.send(`
