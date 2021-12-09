@@ -2,15 +2,57 @@ const express = require('express')
 const path = require('path')
 const app = express()
 
+app.use(express.static(path.join(__dirname, 'public')))
+
 app.get('/', (req, res) => {
   // res.send('Hello World!')
-  res.sendFile(path.join(__dirname, 'favorites.html'))
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
 app.get('/games', (req, res) => {
   // res.send('Hello World!')
-  res.sendFile(path.join(__dirname, 'games.html'))
+  res.sendFile(path.join(__dirname, 'public', 'games.html'))
 })
+
+app.get('/movies', (req, res) => {
+  // res.send('Hello World!')
+  res.sendFile(path.join(__dirname, 'public', 'movies.html'))
+})
+
+app.get('/foods', (req, res) => {
+  // res.send('Hello World!')
+  res.sendFile(path.join(__dirname, 'public', 'foods.html'))
+})
+
+// let games = {
+//   games: [
+//     {
+//       name: "Fortknife",
+//       dev: "Epic"
+//     },
+//     {
+//       name: "Battlefield",
+//       dev: "Dice"
+//     },
+//     {
+//       name: "Guild Wars 2",
+//       dev: "ArenaNet"
+//     }]
+// };
+
+// app.get('/games', (req, res) => {
+//   res.json(games);
+// })
+
+// const dog = {
+//   name: 'Beef',
+//   age: 2,
+//   breed: 'Chihuahua'
+// }
+
+// app.get('/dog', (req, res) => {
+//   res.json(dog)
+// })
 
 // app.get('/', (req, res) => {
 //   res.send(`

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite Games!</title>
+</head>
+<body>
+  <a href="/">Home Page</a>
+  <h1>Favorite Games!</h1>
+  <ul id="games_list"></ul>
+  
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      axios.get("/games").then(res => {
+        let games = res.data.games;
+        for (let i = 0; i < games.length; i++) {
+          let li = document.createElement('li');
+          li.innerHTML = `${games[i].name} by ${games[i].dev}`;
+          document.getElementById('games_list').append(li);
+        }
+      })
+    </script>
+</body>
+</html>
